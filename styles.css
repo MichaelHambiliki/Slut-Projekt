@@ -1,0 +1,303 @@
+body {
+    margin: 0px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    color: white;
+
+
+    background-image: url(images/MJ.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+main {
+    width: 80vw;
+}
+
+body > :first-child {
+    padding: 30px;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+header > h1 {
+    font-size: 40px;
+    padding: 0px;
+    font-family: 'preconnect';
+
+}
+
+nav {
+    display: flex;
+    flex-basis: 50px;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+    margin: 40px 0;
+    padding: 0px;
+
+}
+
+nav div {
+    color: black;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+
+    font-size: 16px;
+}
+
+nav div:nth-child(1):hover,
+nav div:nth-child(3):hover,
+nav div:nth-child(4):hover {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    
+}
+
+.marked {
+    font-weight: bold;
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px white;
+}
+
+.album_data h1 {
+    font-family: "Bungee Outline";
+    margin-bottom: 10px;
+}
+
+.album_data h2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+
+.album_data ul {
+    margin-bottom: 50px;
+}
+
+#are_you_experienced.best {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    border-radius: 10px;
+    
+    height: 80%;
+    margin-bottom: 15px;
+}
+ 
+.best {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    height: 1400px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+div > div > ul {
+    list-style: none;
+}
+
+div.album_data {
+   margin-right: 25px;
+}
+
+
+.album_description {
+    max-width: 50vw;
+}
+
+.cover {
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 20px 20px 0 0;
+
+    display: flex;
+    background-color: #281b25;
+    }
+
+.show_not_hover {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+
+    border-radius: 20px 20px 0 0;    
+}
+
+
+.show_hover {
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    object-fit:contain;
+    border-radius: 20px 20px 0 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.show_hover:hover{
+    opacity: 1;
+}
+
+
+div.song_list {
+    display: flex;
+    grid-column: 2;
+}
+
+div.song_list div:first-child {
+    background-color: #281b25;
+    margin-right: 5px;
+    border-radius: 0 0 0 20px;
+    padding-right: 50px; 
+    
+}
+
+div.song_list div:last-child {
+    background-color: #281b25;
+    margin-right: 5px;
+    border-radius: 0 0 20px 0;
+    padding-right: 50px; ;
+}
+
+div.song_list > div > ul {
+    list-style-type: decimal;
+}
+
+ul.anecdotes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+   
+    width: 100%;
+    padding-left: 0;
+
+    grid-column: 1 /span 2;
+}
+
+ul.anecdotes  li {
+    list-style: none;
+}
+
+li.top_right_90 {
+    background-color: white;
+    color: #a87866;
+    padding: 10px;
+    border-radius: 10px 0 10px 10px;
+    padding: 30px;
+}
+ 
+
+li.two_wide.bottom_left_90 {
+    grid-column: 3 /span 2;
+    background-color: white;
+    color: #a87866;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    padding: 30px;
+
+}
+
+li.image_1.top_left_90 {
+    grid-column: 5;
+    grid-row: 1;
+    background-color: white;
+    color: #a87866;
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    margin-left: 10px;
+    padding: 30px;
+
+    background-image: url(images/Quincy_Jones.jpg);
+    background-size: cover;
+}
+
+
+li.bottom_right_90 {
+    grid-column: 6 /span 1;
+    grid-row: 1;
+    background-color: white;
+    color: #a87866;
+    padding: 10px;
+    border-radius: 10px 10px 0 10px;
+    margin-left:10px;
+    padding: 30px;
+
+}
+
+li.tablet_empty {
+    display: none;
+}
+
+li.empty.phone_empty {
+    display: none;
+}
+
+
+/* NÄSTA SLIDE */
+
+
+#axis_bold_as_love.best {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+
+    display: grid;
+    height: 80%;
+    margin-bottom: 15px;
+}
+
+
+ul.anecdotes  li {
+    list-style: none;
+    margin: 5px;
+    padding: 10px
+}
+
+
+li.two_wide.bottom_left_90:nth-child(1) {
+    grid-column: 1 /span 2 ;
+    background-color: aqua;
+}
+
+li.two_wide.image.image_1.top_left_90:nth-child(5) {
+    
+    grid-column: 4 /span 2;
+}
+
+
+
+li.bottom_right_90:nth-child(6) {
+    background-color: aquamarine;
+    
+    grid-column: 6;
+}
+
+li.top_left_90:nth-child(2) {
+    grid-column: 3;
+    background-color: aqua;
+}
+
+li.two_wide.image
+
+li.empty.tablet_empty {
+    display: none;
+}

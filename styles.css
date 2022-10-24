@@ -301,3 +301,129 @@ li.two_wide.image
 li.empty.tablet_empty {
     display: none;
 }
+
+
+/* TABLET VERSION */
+
+@media (max-width: 800px) {
+    header {
+        justify-content: center;
+
+    }
+
+    header > h1 {
+        font-size: 50px;
+    }
+    
+    .cover {
+        margin-right: 10px;
+        margin-bottom: 0;
+        border-radius: 20px 0 0 20px;
+        
+       
+        grid-column: 1/ span 2;
+        grid-row: 1 / span 2;
+
+    }
+
+    .show_hover {
+        display: none;
+    }
+    
+    div.song_list {
+        display: flex;
+        flex-direction: column;
+        
+        grid-column: 3;
+        gap: 14px;
+    }
+
+    div.song_list div:first-child {
+        border-radius: 0 20px 0 0;
+    }
+    
+
+    .show_not_hover {
+        border-radius: 20px 0 0 20px;
+        pointer-events:none
+    }
+
+    .best {
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        grid-template-rows: repeat(3, auto);
+        
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .album_data h1 {
+        font-size: 35px;
+        margin-top: 10px;
+    }
+    
+    .album_data h2 {
+        font-size: 30px;
+    }
+
+    div.album_data {
+        grid-column: 1 /span 3;
+        grid-row: 3;
+     }
+
+    .album_data {
+        grid-row: 2;
+    }
+
+    .album_description {
+        max-width: 100%;
+    }
+
+    ul.anecdotes {
+        grid-column: 1 /span 3;
+    }
+    
+
+    li.top_right_90 {
+        grid-column: 1 /span 2;
+    }
+
+    li.two_wide.bottom_left_90 {
+        grid-column: 4 /span 3;
+    }
+
+    li.image_1.top_left_90 {
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    li.bottom_right_90 {
+        grid-column: 4;
+        grid-row: 2;
+    }
+
+
+
+
+    /* NÄSTA SLIDE */
+
+
+    li.two_wide.bottom_left_90:nth-child(1) {
+        grid-column: 1 /span 3;
+    }
+
+    li.top_left_90:nth-child(2) {
+    
+        grid-column: 4;
+    }
+
+    li.two_wide.image.image_1.top_left_90:nth-child(5) {
+        grid-row: 2;
+        grid-column: 2 /span 3;
+    }
+
+    li.bottom_right_90:nth-child(6) {
+        grid-column: 5 /span 2;
+    }
+}
+

@@ -35,7 +35,7 @@ header {
 }
 
 header > h1 {
-    font-size: 40px;
+    font-size: 8vw;
     padding: 0px;
     font-family: 'preconnect';
 
@@ -63,7 +63,7 @@ nav div {
     border-radius: 10px;
     flex: 1;
 
-    font-size: 16px;
+    font-size: 2vw;
 }
 
 nav div:nth-child(1):hover,
@@ -83,16 +83,27 @@ nav div:nth-child(4):hover {
 .album_data h1 {
     font-family: "Bungee Outline";
     margin-bottom: 10px;
+    font-size: 2.5vw;
 }
 
 .album_data h2 {
     margin-top: 10px;
     margin-bottom: 50px;
+    font-size: 2.5vw;
 }
 
 
 .album_data ul {
     margin-bottom: 50px;
+}
+
+
+p {
+    font-size: 2vw;
+}
+
+li {
+    font-size: 1.5vw;
 }
 
 #are_you_experienced.best {
@@ -162,6 +173,12 @@ div.album_data {
 div.song_list {
     display: flex;
     grid-column: 2;
+
+    font-size: 1.5vw;
+}
+
+div.song_list h2 {
+    margin-left: 2.5vw;
 }
 
 div.song_list div:first-child {
@@ -286,7 +303,7 @@ li.two_wide.image.image_1.top_left_90:nth-child(5) {
 
 
 li.bottom_right_90:nth-child(6) {
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
     
     grid-column: 6;
 }
@@ -296,7 +313,6 @@ li.top_left_90:nth-child(2) {
     background-color: aqua;
 }
 
-li.two_wide.image
 
 li.empty.tablet_empty {
     display: none;
@@ -305,16 +321,32 @@ li.empty.tablet_empty {
 
 /* TABLET VERSION */
 
-@media (max-width: 800px) {
+@media (max-width: 800px)  {
+    
+    body > div {
+        justify-self: center;
+    }
+    
+    
     header {
         justify-content: center;
 
     }
 
     header > h1 {
-        font-size: 50px;
+        font-size: 12vw;
+        text-align: center;
+        margin: 0;
     }
     
+    nav {
+        width: 80vw;
+    }
+
+    nav div {
+        font-size: 2vw;
+        padding: 15px;
+    }
     .cover {
         margin-right: 10px;
         margin-bottom: 0;
@@ -326,16 +358,19 @@ li.empty.tablet_empty {
 
     }
 
-    .show_hover {
+    .show_not_hover {
         display: none;
+    }
+
+    div.song_list h2 {
+        margin-left: 3.5vw;
     }
     
     div.song_list {
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
         grid-column: 3;
-        gap: 14px;
+        gap: 10px;
     }
 
     div.song_list div:first-child {
@@ -358,12 +393,12 @@ li.empty.tablet_empty {
     }
     
     .album_data h1 {
-        font-size: 35px;
+        font-size: 5vw;
         margin-top: 10px;
     }
     
     .album_data h2 {
-        font-size: 30px;
+        font-size: 5vw;
     }
 
     div.album_data {
@@ -377,6 +412,14 @@ li.empty.tablet_empty {
 
     .album_description {
         max-width: 100%;
+    }
+
+    p {
+        font-size: 2.5vw;
+    }
+
+    li {
+        font-size: 2vw;
     }
 
     ul.anecdotes {
@@ -427,3 +470,111 @@ li.empty.tablet_empty {
     }
 }
 
+/* PHONE VERSION */
+
+@media (max-width: 500px) {
+    
+    .best {
+        display: grid;
+        grid-template-columns: 2fr 1fr ;
+        grid-template-rows: 200px 1fr;
+        
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .cover {
+        grid-row: 1;
+        margin:0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .show_not_hover {
+        display: none;
+    }
+
+    div.song_list h2 {
+        margin-left: 6vw;
+    }
+
+    div.song_list {
+        grid-row: 2;
+        grid-column: 1 /span 2;
+        flex-direction: row;
+        
+
+        margin-top: 10px;
+        gap: 10px;
+        
+    }
+
+    li {
+        font-size: 2vw;
+    }
+
+    div.song_list div:first-child {
+        border-radius: 0 0 0 20px;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    div.song_list div:last-child {  
+        border-radius: 0 0 20px 0;
+        margin-right: 0;
+        padding-right: 80px;
+    }
+
+    ul.anecdotes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    li.top_right_90 {
+        grid-column: 1;
+    }
+
+    li.two_wide.bottom_left_90 {
+        grid-column: 3 /span 2;
+    }
+
+    li.two_wide.bottom_left_90 {
+        
+    }
+
+    li.empty {
+        display: none;
+    }
+    li.empty.tablet_empty {
+        display: none;
+    }
+
+     /* NÄSTA SLIDE */
+
+    ul.anecdotes {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+    }
+     
+
+     li.two_wide.bottom_left_90:nth-child(1) {
+        grid-column: 1 /span 4;
+    }
+
+    li.top_left_90:nth-child(2) {
+    
+        grid-column: 5 /span 2;
+    }
+
+
+    
+
+
+    
+
+    
+
+
+
+
+}

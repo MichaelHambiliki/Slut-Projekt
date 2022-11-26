@@ -1,9 +1,17 @@
+* {
+    margin: 0;
+    font-size: 2vw;
+}
+
+
 body {
     margin: 0px;
-    padding-top: 100px;
+    padding: 100px 20px;
+    
     display: flex;
     justify-content: center;
     color: white;
+    font-family: 'Barlow Condensed';
 
 
     background-image: url(images/MJ.jpg);
@@ -13,11 +21,27 @@ body {
     background-attachment: fixed;
 }
 
+body > :first-child {
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    width: 90%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.221);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
 
 
 main {
-    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
 }
+
 
 body > :first-child {
     padding: 30px;
@@ -35,9 +59,9 @@ header {
 }
 
 header > h1 {
-    font-size: 8vw;
+    font-size: 6vw;
     padding: 0px;
-    font-family: 'preconnect';
+    font-family: 'Bungee outline';
 
 }
 
@@ -74,10 +98,16 @@ nav div:nth-child(4):hover {
     
 }
 
+
+
 .marked {
     font-weight: bold;
     border: 1px solid white;
     box-shadow: 0px 0px 8px white;
+}
+
+.album_data {
+    font-size: 1.5vw;
 }
 
 .album_data h1 {
@@ -98,10 +128,6 @@ nav div:nth-child(4):hover {
 }
 
 
-p {
-    font-size: 2vw;
-}
-
 li {
     font-size: 1.5vw;
 }
@@ -117,8 +143,8 @@ li {
  
 .best {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr;
+    grid-template-columns: repeat(7, 1fr);
+    
     height: 1400px;
     padding: 10px;
     margin-bottom: 15px;
@@ -130,6 +156,7 @@ div > div > ul {
 
 div.album_data {
    margin-right: 25px;
+   grid-column: 1/ 5;
 }
 
 
@@ -138,6 +165,7 @@ div.album_data {
 }
 
 .cover {
+    grid-column: 5/ 8;
     position: relative;
     margin-bottom: 10px;
     border-radius: 20px 20px 0 0;
@@ -145,6 +173,12 @@ div.album_data {
     display: flex;
     background-color: #281b25;
     }
+
+.cover img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
 
 .show_not_hover {
     max-height: 100%;
@@ -159,10 +193,12 @@ div.album_data {
     max-height: 100%;
     max-width: 100%;
     position: absolute;
-    object-fit:contain;
+    object-fit:cover;
+
     border-radius: 20px 20px 0 0;
     opacity: 0;
     transition: opacity 1s;
+
 }
 
 .show_hover:hover{
@@ -171,33 +207,43 @@ div.album_data {
 
 
 div.song_list {
-    display: flex;
-    grid-column: 2;
-
-    font-size: 1.5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 5 /span 3;
 }
 
 div.song_list h2 {
-    margin-left: 2.5vw;
+    margin-left: 12px;
+
 }
 
 div.song_list div:first-child {
     background-color: #281b25;
     margin-right: 5px;
+    padding: 10% 0;
     border-radius: 0 0 0 20px;
-    padding-right: 50px; 
+    
     
 }
 
 div.song_list div:last-child {
     background-color: #281b25;
     margin-right: 5px;
+    padding: 10% 0;
     border-radius: 0 0 20px 0;
     padding-right: 50px; ;
 }
 
 div.song_list > div > ul {
     list-style-type: decimal;
+    font-size: 1vw;
+    padding-left: 30px;
+
+}
+
+#are_you_experienced > :nth-child(4) {
+    grid-column: 1/ span 8;
+
 }
 
 ul.anecdotes {
@@ -220,6 +266,9 @@ li.top_right_90 {
     padding: 10px;
     border-radius: 10px 0 10px 10px;
     padding: 30px;
+
+    display: flex;
+    align-items: center;
 }
  
 
@@ -229,7 +278,7 @@ li.two_wide.bottom_left_90 {
     color: #a87866;
     padding: 10px;
     border-radius: 10px 10px 10px 0;
-    padding: 30px;
+    padding: 40px;
 
 }
 
@@ -241,9 +290,13 @@ li.image_1.top_left_90 {
     padding: 10px;
     border-radius: 10px 10px 0 10px;
     margin-left: 10px;
-    padding: 30px;
+
+    display: flex;
+    align-items: flex-end;
 
     background-image: url(images/Quincy_Jones.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -256,7 +309,10 @@ li.bottom_right_90 {
     padding: 10px;
     border-radius: 10px 10px 0 10px;
     margin-left:10px;
-    padding: 30px;
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
 
 }
 
@@ -282,6 +338,10 @@ li.empty.phone_empty {
     margin-bottom: 15px;
 }
 
+#axis_bold_as_love div.song_list div {
+    background-color: #a2bfc7;
+    color: #f05023;
+}
 
 ul.anecdotes  li {
     list-style: none;
@@ -289,28 +349,41 @@ ul.anecdotes  li {
     padding: 10px
 }
 
+#axis_bold_as_love > :nth-child(4) {
+    grid-column: 1 /span 8;
+}
 
 li.two_wide.bottom_left_90:nth-child(1) {
     grid-column: 1 /span 2 ;
-    background-color: aqua;
+    background-color: #f6f7fa;
+    color: #054016;
+
+    display: flex;
+    align-items: center;
 }
 
 li.two_wide.image.image_1.top_left_90:nth-child(5) {
-    
     grid-column: 4 /span 2;
+    color: #f05023;
+
+    background-image: url(images/david_foster.jpg);
+    background-size: cover;
+    
 }
 
-
-
 li.bottom_right_90:nth-child(6) {
-    background-color: rgb(255, 255, 255);
+    background-color: #f6f7fa;
+    color: #054016;
     
     grid-column: 6;
 }
 
 li.top_left_90:nth-child(2) {
     grid-column: 3;
-    background-color: aqua;
+    background-color: #f6f7fa;
+    color: #054016;
+    border-radius: 0 20px 20px 20px;
+    padding: 20px;
 }
 
 
@@ -323,6 +396,14 @@ li.empty.tablet_empty {
 
 @media (max-width: 800px)  {
     
+    * {
+        font-size: 2.5vw;
+    }
+
+    body {
+        background: url("images/MJ.tablet.jpg") no-repeat fixed center/cover;
+    }
+
     body > div {
         justify-self: center;
     }
@@ -334,9 +415,8 @@ li.empty.tablet_empty {
     }
 
     header > h1 {
-        font-size: 12vw;
+        font-size: 10vw;
         text-align: center;
-        margin: 0;
     }
     
     nav {
@@ -351,14 +431,13 @@ li.empty.tablet_empty {
         margin-right: 10px;
         margin-bottom: 0;
         border-radius: 20px 0 0 20px;
-        
-       
+
         grid-column: 1/ span 2;
         grid-row: 1 / span 2;
 
     }
 
-    .show_not_hover {
+    .show_hover {
         display: none;
     }
 
@@ -393,12 +472,12 @@ li.empty.tablet_empty {
     }
     
     .album_data h1 {
-        font-size: 5vw;
+        font-size: 2vw;
         margin-top: 10px;
     }
     
     .album_data h2 {
-        font-size: 5vw;
+        font-size: 2vw;
     }
 
     div.album_data {
@@ -419,30 +498,40 @@ li.empty.tablet_empty {
     }
 
     li {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     ul.anecdotes {
         grid-column: 1 /span 3;
+        gap:1vw;
+        margin-top: 1vw;
     }
     
 
     li.top_right_90 {
         grid-column: 1 /span 2;
+        margin: 0;
     }
 
     li.two_wide.bottom_left_90 {
         grid-column: 4 /span 3;
+        margin: 0;
     }
 
     li.image_1.top_left_90 {
         grid-column: 3;
         grid-row: 2;
+        margin: 0;
     }
 
     li.bottom_right_90 {
-        grid-column: 4;
+        grid-column: 4 /span 2;
         grid-row: 2;
+        margin: 0;
+    }
+
+    li.empty {
+        display: none;
     }
 
 
@@ -451,13 +540,30 @@ li.empty.tablet_empty {
     /* NÄSTA SLIDE */
 
 
+    div.song_list {
+        grid-row: 1 /span 2;
+    }
+
+    div.song_list div:last-child {
+        flex: 1;
+    }
+    
+    #axis_bold_as_love > :nth-child(4) {
+        grid-template-rows: 1fr 1fr;
+    }
+
+
     li.two_wide.bottom_left_90:nth-child(1) {
         grid-column: 1 /span 3;
+
     }
 
     li.top_left_90:nth-child(2) {
-    
         grid-column: 4;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
     }
 
     li.two_wide.image.image_1.top_left_90:nth-child(5) {
@@ -467,75 +573,107 @@ li.empty.tablet_empty {
 
     li.bottom_right_90:nth-child(6) {
         grid-column: 5 /span 2;
+        margin: 0;
     }
 }
 
 /* PHONE VERSION */
 
 @media (max-width: 500px) {
-    
+
+    body {
+        background: url("images/MJ.tablet.jpg") no-repeat fixed center/cover;
+        padding: 0;
+       
+    }
+
+    body> :first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: max-content;
+        height: max-content;
+        border-radius: 0;
+
+    }
+
+
     .best {
         display: grid;
-        grid-template-columns: 2fr 1fr ;
-        grid-template-rows: 200px 1fr;
-        
+        grid-template-columns: 1fr ; 
         padding: 10px;
         margin-bottom: 15px;
     }
 
     .cover {
         grid-row: 1;
-        margin:0;
+        margin: 0;
         border-radius: 20px 20px 0 0;
+        max-height: 330px;
     }
 
     .show_not_hover {
-        display: none;
+        border-radius: 20px 20px 0 0;
     }
 
+
     div.song_list h2 {
-        margin-left: 6vw;
+        margin-left: 15px;
     }
 
     div.song_list {
+        display: grid;
         grid-row: 2;
         grid-column: 1 /span 2;
         flex-direction: row;
         
+        margin-top: 10px;        
+    }
 
+    .album_data {
+        margin-bottom: 2vw;
+    }
+
+    .album_data h1 {
+        font-size: 4vw;
         margin-top: 10px;
-        gap: 10px;
-        
     }
-
-    li {
-        font-size: 2vw;
-    }
+    
 
     div.song_list div:first-child {
         border-radius: 0 0 0 20px;
-        margin-right: 0;
-        padding: 20px;
+        text-align: start;
+        padding-left: 10px;
     }
 
     div.song_list div:last-child {  
         border-radius: 0 0 20px 0;
         margin-right: 0;
-        padding-right: 80px;
+        text-align: start;
+        padding-left: 10px;
+        
     }
+
+
 
     ul.anecdotes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 0px;
+        gap: 1vw;
     }
 
-    li.top_right_90 {
+    #are_you_experienced > :nth-child(4) > :nth-child(1) {
         grid-column: 1;
-    }
+        grid-row: 1;
+        margin: 0;
+      }
 
-    li.two_wide.bottom_left_90 {
-        grid-column: 3 /span 2;
-    }
+      #are_you_experienced > :nth-child(4) > :nth-child(7) {
+        grid-column: 3;
+        grid-row: 2;
+        margin: 0;
+      }
 
     li.two_wide.bottom_left_90 {
         
@@ -550,31 +688,77 @@ li.empty.tablet_empty {
 
      /* NÄSTA SLIDE */
 
-    ul.anecdotes {
-        display: grid;
-        grid-template-columns: 1fr ;
+   
+     #are_you_experienced> :nth-child(4) {
+        font-size: 2.5vw;
+        grid-row: 4;
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
     }
-     
 
-     li.two_wide.bottom_left_90:nth-child(1) {
-        grid-column: 1 /span 4;
+    #are_you_experienced> :nth-child(4)>:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
     }
 
-    li.top_left_90:nth-child(2) {
-    
-        grid-column: 5 /span 2;
+    #are_you_experienced> :nth-child(4)>:nth-child(3) {
+        grid-column: 2/4;
+        grid-row: 1;
     }
 
+    #are_you_experienced> :nth-child(4)>:nth-child(6) {
+        grid-column: 2;
+        grid-row: 2;
+    }
 
-    
+    #are_you_experienced> :nth-child(4)>:nth-child(7) {
+        grid-column: 3;
+        grid-row: 2;
+    }
 
+    #axis_bold_as_love>.song_list {
+        grid-row: 2;
+        grid-column: 1;
+    }
 
-    
+    #axis_bold_as_love> :nth-child(4) {
+        font-size: 2.5vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
 
-    
+    #axis_bold_as_love> :nth-child(4)> :nth-child(1) {
+        grid-column: 1/3;
+        grid-row: 1;
+    }
 
+    #axis_bold_as_love> :nth-child(4)> :nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+    }
 
+    #axis_bold_as_love> :nth-child(4)> :nth-child(3) {
+        display: none;
+    }
+
+    #axis_bold_as_love> :nth-child(4)> :nth-child(4) {
+        display: none;
+    }
+
+    #axis_bold_as_love> :nth-child(4)> :nth-child(5) {
+        grid-column: 1/3;
+        grid-row: 2;
+        object-fit:fill;
+    }
+
+    #axis_bold_as_love> :nth-child(4)> :nth-child(6) {
+        grid-column: 3;
+        grid-row: 2;
+    }
 
 
 }
+    
+
+
+

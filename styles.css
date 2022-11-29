@@ -760,5 +760,34 @@ li.empty.tablet_empty {
 }
     
 
+/* query text */
+
+@media (max-width: 900px) {
+
+    .album_data,
+    div.song_list>div>ul,
+    .best> :nth-child(4) {
+      font-size: 18px;
+
+    }
+
+    .song_list h2 {
+      font-size: 18px;
+    }
+}
+
+@media (min-width: 1111px) {
+
+    .album_data,
+    div.song_list>div>ul,
+    .best> :nth-child(4) {
+      font-size:22.2167px
+    }
+
+    .song_list h2 {
+      font-size:22.2167px
+    }
+}
+
 
 
